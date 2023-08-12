@@ -5,7 +5,7 @@ import {Routes, Route} from "react-router";
 import FooterComponent from './components/FooterComponent';
 import HeaderComponent from './components/HeaderComponent';
 import ListEmployeeComponent from './components/ListEmployeeComponent';
-import CreateEmployeeComponent from './components/CreateEmployeeComponent';
+import SignUpComponent from './components/SignUpComponent';
 import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
 import GetTemplate from './components/GetTemplate';
 import CreateTemplateComponent from './components/CreateTemplateComponent';
@@ -23,7 +23,7 @@ function App() {
           <Routes>
             <Route path = "/" element={<ListEmployeeComponent/>}></Route>
             <Route path = "/employees" element={<ListEmployeeComponent/>}></Route>
-            <Route path = "/add-employee" element={<CreateEmployeeComponent/>}></Route>
+            <Route path = "/add-employee" element={<SignUpComponent/>}></Route>
             <Route path = "/update-employee/:id" element={<UpdateEmployeeComponent/>}></Route>
             <Route path = "/:id/get-templates" element={<GetTemplate/>}></Route>
             <Route path = "/:id/add-template" element={<CreateTemplateComponent/>}></Route>

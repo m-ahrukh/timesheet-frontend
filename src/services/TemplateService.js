@@ -15,8 +15,12 @@ class TemplateService{
         return axios.get(TEMPLATE_API_BASEURL+'/'+employeeId+'/templates/'+templateId)
     }
 
-    updateTemplate(employeeId, templateId, template){
-        return axios.patch(TEMPLATE_API_BASEURL+'/'+employeeId+'/templates/'+templateId, template )
+    updateTemplate(template, employeeId, templateId){
+        return axios.patch(TEMPLATE_API_BASEURL+'/'+employeeId+'/templates/'+templateId, template)
+    }
+
+    deleteTemplate(employeeId, templateId){
+        return axios.delete(TEMPLATE_API_BASEURL + '/' + employeeId+"/templates/"+templateId)
     }
 }
 

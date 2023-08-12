@@ -62,8 +62,6 @@ class CreateTemplateComponent extends Component {
                         lunchBreakStart: breakStartObj,
                         lunchBreakEnd: breakEndObj};
 
-
-        console.log(template.checkIn)
         console.log("template => " + JSON.stringify(template));
 
         TemplateService.addTemplate(template, this.state.employeeId).then((res) => {

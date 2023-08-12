@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import EmployeeService from '../services/EmployeeService';
 import { Link } from 'react-router-dom';
 
-export default class CreateEmployeeComponent extends Component {
+export default class SignUpComponent extends Component {
     constructor(props) {
         super(props)
 

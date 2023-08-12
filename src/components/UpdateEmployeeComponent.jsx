@@ -49,13 +49,14 @@ class UpdateEmployeeComponent extends Component {
                         password: this.state.password};
         console.log("employee => " + JSON.stringify(employee));
 
-        EmployeeService.updateEmployee(employee, this.state).then((res) => {
+        EmployeeService.updateEmployee(employee, this.state.id).then((res) => {
             window.location.replace('/employees');
         });
 
     }
 
     componentDidMount() {
+        
         EmployeeService.getEmployeeById(this.state.id).then((res)=>{
             let employee = res.data;
             this.setState({firstName: employee.firstName,
