@@ -10,11 +10,12 @@ import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
 import GetTemplate from './components/GetTemplate';
 import CreateTemplateComponent from './components/CreateTemplateComponent';
 import UpdateTemplateComponent from './components/UpdateTemplateComponent';
+import LoginComponent from './components/LoginComponent';
 
 
 function App() {
   return (
-    <div>
+    <div className='page'>
       
       <Router>
         <div className='container'>
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path = "/" element={<ListEmployeeComponent/>}></Route>
             <Route path = "/employees" element={<ListEmployeeComponent/>}></Route>
+            <Route path = "/login" element={<LoginComponent/>}></Route>
             <Route path = "/add-employee" element={<SignUpComponent/>}></Route>
             <Route path = "/update-employee/:id" element={<UpdateEmployeeComponent/>}></Route>
             <Route path = "/:id/get-templates" element={<GetTemplate/>}></Route>
@@ -30,7 +32,7 @@ function App() {
             <Route path = ":employeeId/update-template/:id" element={<UpdateTemplateComponent/>}></Route>
           </Routes>
           </div>
-          {/* <FooterComponent /> */}
+          <FooterComponent />
         </div>
       </Router>
     </div>
